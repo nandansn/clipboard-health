@@ -77,8 +77,6 @@ The test project is published as docker image. So, you can pull the image from t
 1. pull and execute the docker using following command
 > docker run geeknandadocker13/clipboard-automation
 
-## Test Execution Result
-
-![](img_1.png)
 ***
+
 
