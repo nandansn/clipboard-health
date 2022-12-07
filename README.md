@@ -1,7 +1,7 @@
 # ![](https://clipboardhealth.com/wp-content/uploads/2022/02/CBH-Logo-1200x628-721-DPI.png)
 
 # Clipboard Health - Coding Exercise
-***
+
 
 This test project is build on top of a base framework [Vanilla](git@github.com:ClipboardHealth/vanilla.git), as part of the test project we automated the following use case,
 
