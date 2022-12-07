@@ -79,6 +79,6 @@ The test project is published as docker image. So, you can pull the image from t
 
 ## Test Execution Result
 
-![img_1.png](img_1.png)
+![](img_1.png)
 ***
 
