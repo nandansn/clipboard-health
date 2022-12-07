@@ -1,10 +1,11 @@
 package amazon.page;
 
-import org.openqa.selenium.WebDriver;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+@Slf4j
 public class HomePage extends BasePage {
 
     @FindBy(id = "nav-hamburger-menu")
@@ -15,6 +16,8 @@ public class HomePage extends BasePage {
     }
 
     public void clickMenu() {
+        log.info("Opening main menu");
         menu.click();
+        log.info("Main menu Opened");
     }
 }

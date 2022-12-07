@@ -1,16 +1,12 @@
 package amazon.page;
 
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
+@Slf4j
 public class ElectronicsMenu extends MenuCategory {
 
     @FindBy(xpath = "//a[contains(text(),'Televisions')]")
@@ -22,10 +18,12 @@ public class ElectronicsMenu extends MenuCategory {
     }
 
     public void clickTelevision() {
+        log.info("Opening sub menu - TV.");
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         waitForVisibilityOfElement(televisions);
         js.executeScript("arguments[0].scrollIntoView();", televisions);
         js.executeScript("arguments[0].focus();", televisions);
         televisions.click();
+        log.info("Sub menu - TV, opened.");
     }
 }

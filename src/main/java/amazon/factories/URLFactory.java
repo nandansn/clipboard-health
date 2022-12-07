@@ -1,8 +1,8 @@
 package amazon.factories;
 
 import amazon.choices.Host;
-import com.typesafe.config.Config;
 import amazon.config.EnvFactory;
+import com.typesafe.config.Config;
 import lombok.extern.slf4j.Slf4j;
 
 import java.net.MalformedURLException;

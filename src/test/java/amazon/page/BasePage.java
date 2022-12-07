@@ -3,14 +3,17 @@ package amazon.page;
 import amazon.config.EnvFactory;
 import amazon.factories.DriverFactory;
 import com.typesafe.config.Config;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
 
 import java.time.Duration;
 import java.util.ArrayList;
 
+@Slf4j
 public class BasePage {
 
     private static final Config config = EnvFactory.getInstance().getConfig();
@@ -49,6 +52,7 @@ public class BasePage {
 //    }
 
     public void switchToChildWindow() {
+        log.info(String.format("Switch to child window"));
         driver.switchTo().window(new ArrayList<>(driver.getWindowHandles()).get(driver.getWindowHandles().size() - 1));
     }
 
@@ -57,6 +61,7 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+
 
 
 }

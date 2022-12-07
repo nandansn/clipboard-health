@@ -2,8 +2,8 @@ package amazon.factories;
 
 import amazon.choices.Browser;
 import amazon.choices.Host;
-import com.typesafe.config.Config;
 import amazon.config.EnvFactory;
+import com.typesafe.config.Config;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
