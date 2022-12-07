@@ -54,13 +54,13 @@ You can execute the test in 2 ways:
 
 **Steps:**
 
-1. clone the repo:
-> git@github.com:nandansn/vanilla.git
+1. clone the repo following repo, branch: master
+> git@github.com:nandansn/clipboard-health.git
 2. execute the following commands
 > mvn clean install
 > mvn surefire:test
 3. You can find the report in the following path
-> ./vanilla/target/site/surefire-report.html
+> ./clipboard-health/target/site/surefire-report.html
 
 
 ## Executing in docker container
