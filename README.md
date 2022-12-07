@@ -58,7 +58,7 @@ You can execute the test in 2 ways:
 > git@github.com:nandansn/clipboard-health.git
 2. execute the following commands
 > mvn clean install
-> mvn surefire:test
+> mvn site
 3. You can find the report in the following path
 > ./clipboard-health/target/site/surefire-report.html
 
@@ -75,8 +75,10 @@ The test project is published as docker image. So, you can pull the image from t
 **Steps:**
 
 1. pull and execute the docker using following command
-> docker run  geeknandadocker13/clipboard-test
+> docker run geeknandadocker13/clipboard-automation
 
+## Test Execution Result
 
+![img_1.png](img_1.png)
 ***
 
