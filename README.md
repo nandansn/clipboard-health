@@ -1,28 +1,82 @@
-# Assignment
+# ![](https://clipboardhealth.com/wp-content/uploads/2022/02/CBH-Logo-1200x628-721-DPI.png)
 
-[Click here to read the assignment](./docs/assignment.md)
+# Clipboard Health - Coding Exercise
+***
 
-## vanilla
+This test project is build on top of a base framework [Vanilla](git@github.com:ClipboardHealth/vanilla.git), as part of the test project we automated the following use case,
 
-This is a base starter kit framework that you can use to build your tests for the above assignment.
-However, if you are more comfortable with your own tool kit, feel free to use that as well!
+**Test Steps:**
 
-## External dependencies
+- Open web: amazon.in
+- Click menu, item category
+- Click on Televisions under Tv, Audio & Cameras sub section.
+- Scroll down and filter the results by Brand ‘Samsung’.
+- Sort listed items by "Price: High To Low"
+- Open or click second item in the sorted list
+- Switch to child window
+- Validate the text "About this item" in the Item Description section
+- Get the "About this item" and log it in the console.
 
-For this project to run, you would need to install below 3 dependencies on your machine:
 
-- **[Java 11](https://openjdk.java.net/projects/jdk/11/)** (as the core programming language)
-- **[Maven 3.8.5](https://maven.apache.org/download.cgi)** (for dependency management)
-- **[Google Chrome latest version](https://www.google.com/chrome/?brand=CHBD&gclid=Cj0KCQjwr-SSBhC9ARIsANhzu15P0PA-n9Zp4NpxKaOHVGtBD1TZQH0HlQQE6hUfsOFAU1nf-Rzdlf4aAoTJEALw_wcB&gclsrc=aw.ds)** (browser to run your tests)
+## Test Components
 
-> If your JAVA_HOME is set to anything other than JDK 11, you would need to update the path. Else your project
-> will not run. Also, do remember to set the correct JDK settings in your IDE.
+1. Infra Components
+    1. Driver Factory, URL Factory, Env Factory these components help to initialize the browser and driver objects required for application interaction
+2. Page Components
+    1. Base Page, Menu, ProductPage etc help to initiate the page elements and provides methods to perform actions on the web elements like click, type etc.
+3. Test Components
+    1. Test class, Test Methods used to define the test steps and pass test data to perform the testing on the web application.
 
-## Getting Started
 
-For easiest way to getting started, extract this project and open it from IntelliJ.
-> Then Do a dry run on test in : test -> java -> TestSandbox class and see if your setup is correct.  
+## Technology stack
 
-Tip: Do remember to update this readme file for anything else that you think needs updating here!
+- Java
+- Junit
+- Selenium Webdriver
+- Docker
+- Maven
 
-## Success
+
+## How to execute the test?
+
+You can execute the test in 2 ways:
+
+- You can run using **mvn** command in your local machine
+- You can run using **docker image**
+
+### Executing using mvn:
+
+**Pre-requisite:**
+
+- Need to install mvn
+- Need to install jdk
+- Need to install Chrome browser
+
+**Steps:**
+
+1. clone the repo:
+> git@github.com:nandansn/vanilla.git
+2. execute the following commands
+> mvn clean install
+> mvn surefire:test
+3. You can find the report in the following path
+> ./vanilla/target/site/surefire-report.html
+
+
+## Executing in docker container
+
+The test project is published as docker image. So, you can pull the image from the docker registry and run the test.
+
+**Pre-requisite:**
+
+- Need to install docker
+- docker daemon should be up and running
+
+**Steps:**
+
+1. pull and execute the docker using following command
+> docker run  geeknandadocker13/clipboard-test
+
+
+***
+
